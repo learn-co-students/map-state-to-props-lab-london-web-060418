@@ -1,6 +1,8 @@
-export default function manageUsers(state = {
+const defaultState = {
   users: [],
-}, action){
+}
+
+const manageUsers = (state = defaultState, action) => {
   switch (action.type) {
     case 'ADD_USER':
       console.log('adding ', action.user);
@@ -13,3 +15,5 @@ export default function manageUsers(state = {
       return state;
   }
 };
+
+export default manageUsers
